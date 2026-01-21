@@ -1,4 +1,4 @@
-import {db} from './config/db.js'
+import db from './config/db.js'
 
 export const UserModel = {
     create: async (name, email, password, create_at) =>{
