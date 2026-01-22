@@ -1,15 +1,31 @@
-import db from './config/db.js'
+import db from "../config/db.js";
 
-export const UserModel = {
-    create: async (name, email, password, create_at) =>{
-        const sql = `INSERT INTO users (name, email, password, create_at) VALUES (?, ?, ?, ?)`
-        return db.execute(sql, [name, email, password, create_at])
-    },
+// je vais chercher un user dans la base de donnée
 
-    findByEmail: async (email) => {
-        const sql = `SELECT * FROM users WHERE email = ?`
-        const [rows] = await db.execute(sql, [email])
-        return rows [0]
-    }
+export const findUserByEmail = async (email) => {
+  try {
+    const [rows] = await db.query(`SELECT * FROM users WHERE email = ?`, [
+      email,
+    ]);
 
-}
+    return rows[0];
+  } catch (error) {
+    console.error("erreur dans findUserByEmail", error.message);
+    throw error;
+  }
+};
+
+
+
+export const createUser = async ({ email, password, avatar }) => {
+  try {
+    await db.query(
+      "INSERT INTO users (email, password, avatar) VALUES (?, ? , ? )",
+
+      [email, password, avatar],
+    );
+  } catch (error) {
+    console.error("erreur dans findUserByEmail", error.message);
+    throw error;
+  }
+};
