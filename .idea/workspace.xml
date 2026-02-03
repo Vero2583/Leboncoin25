@@ -4,30 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a843b99f-3100-41e8-b160-71721153f70d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/leboncoin_db.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/config/db.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/controllers/annonce.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/composant/backend.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/controllers/auth.controller.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/controllers/category.controller.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/middlewares/auth.middleware.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/middlewares/upload.middleware.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/models/annonce.model.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/models/category.model.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/models/user.model.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/routes/annonce.routes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/routes/auth.routes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/routes/category.routes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/server.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/validations/annonce.validation.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/validations/auth.validation.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/captures/leboncoin25.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/init.sql" beforeDir="false" />
+    <list default="true" id="a843b99f-3100-41e8-b160-71721153f70d" name="Changes" comment="en cours">
+      <change afterPath="$PROJECT_DIR$/frontend/src/composant/Filter.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/composant/backend.jsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +21,9 @@
     </persistenceIdMap>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -66,22 +49,53 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "settings.editor.selected.configurable": "editing.templates"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editing.templates&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Leboncoin25" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="Leboncoin25" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="RUN_TOOL" value="" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -98,7 +112,28 @@
       <option name="presentableId" value="Default" />
       <updated>1768901451746</updated>
     </task>
+    <task id="LOCAL-00001" summary="en cours">
+      <option name="closed" value="true" />
+      <created>1769046177836</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1769046177836</updated>
+    </task>
+    <task id="LOCAL-00002" summary="en cours">
+      <option name="closed" value="true" />
+      <created>1769046230771</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1769046230771</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="en cours" />
+    <option name="LAST_COMMIT_MESSAGE" value="en cours" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
