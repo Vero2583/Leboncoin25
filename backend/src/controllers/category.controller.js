@@ -1,5 +1,11 @@
-import { getAllCategories, create, byid, updateCategoryById, deleteById  } from "../models/category.model.js";
-import { categorySchema } from "../validations/category.validation.js"
+import {
+  getAllCategories,
+  create,
+  byid,
+  updateCategoryById,
+  deleteById,
+} from "../models/category.model.js";
+import { categorySchema } from "../validations/category.validation.js";
 
 export const getCategories = async (req, res) => {
   try {
@@ -27,7 +33,7 @@ export const createCategory = async (req, res) => {
     }
 
     const { error } = categorySchema.validate({ name });
-if (error) {
+    if (error) {
       return res.status(400).json({ message: error.details[0].message });
     }
 
@@ -52,7 +58,7 @@ export const getcategoryById = async (req, res) => {
     const category = await byid(id);
 
     if (!category) {
-      return res.status(400).json({ message: "Aucune cateorie trouvé " });
+      return res.status(400).json({ message: "Aucune categorie trouvé " });
     }
     res.json(category);
   } catch (error) {
@@ -106,20 +112,13 @@ export const deleteCategoryByid = async (req, res) => {
   try {
     const { id } = req.params;
 
-
-
     const affectRows = await deleteById(id);
-
 
     if (affectRows) {
       return res.status(404).json({ message: "aucune categorie trouvée " });
     }
 
-
     res.json({ message: "categorie supprimé " });
-
-
-
   } catch (error) {
     console.error(
       "Erreur lors de la recuperation des categoies dans model ",

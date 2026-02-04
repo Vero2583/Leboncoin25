@@ -4,9 +4,8 @@ import db from "../config/db.js";
 
 export const findUserByEmail = async (email) => {
   try {
-    const [rows] = await db.query(`SELECT * FROM users WHERE email = ?`, [
-      email,
-    ]);
+    const [rows] = await db.query(`SELECT * FROM users WHERE email = ?`, [email]
+    );
 
     return rows[0];
   } catch (error) {
@@ -29,3 +28,5 @@ export const createUser = async ({ email, password, avatar }) => {
     throw error;
   }
 };
+
+

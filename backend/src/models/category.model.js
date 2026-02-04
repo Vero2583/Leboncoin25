@@ -1,5 +1,7 @@
 import db from "../config/db.js"
 
+// recupere toutes les categories
+
 export const getAllCategories = async () => {
     try {
         
@@ -7,21 +9,24 @@ export const getAllCategories = async () => {
         return rows
 
     } catch (error) {
-        console.error("erreur lors de la recuperation des categories", error.message)
+        console.error("erreur lors de la recuperation des categories", error.message);
         throw error
     }
 }
+// creer une categories
 
 export const create = async (name) => {
     try {
         
-        await db.error('INSERT INTO categories (name) VALUES (?)', [name])
+        await db.query('INSERT INTO categories (name) VALUES (?)', [name])
 
     } catch (error) {
         console.error("erreur lors de la creation des categories", error.message)
         throw error
     }
 }
+
+//Afficher par id
 
 export const byid = async (id) => {
     try {
@@ -36,6 +41,8 @@ export const byid = async (id) => {
     
 }
 
+// Mettre à jour une categories
+
 export const updateCategoryById = async (id, name) => {
     try {
         
@@ -47,6 +54,8 @@ export const updateCategoryById = async (id, name) => {
         throw error
     }
 }
+
+// supprimer une categories
 
 export const deleteById = async(id) => {
     try {

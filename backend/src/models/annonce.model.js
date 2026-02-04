@@ -33,16 +33,33 @@ export const createAnnonce = async (data) => {
 }
 
 
-export const updateAnnonceById = async (Id, data) => {
+export const updateAnnonceById = async (id, data) => {
     try {
         
-        const [rows] = await db.query("SELECT * FROM annonces WHERE id= ?", [id]);
+        await db.query(`UPDATE annonces SET title = ?, price = ?, city = ?, image = ?, category_id = ?, WHERE id= ?`, 
+        [data.title, data.price, data.city, data.image, data.category, id]);
         return rows[0] || null;
 
 
     } catch (error) {
         console.error(
             "erreur lors de l'update des annonces coté model:",
+            error.message
+        );
+        throw error
+    }
+}
+
+export const deleteAnnonceById = async (id) => {
+    try {
+       
+       const [result] = await db.query(`DELETE FROM annonces WHERE id = id`, [id]); 
+        return result.affectedRows > 0;
+
+
+    } catch (error) {
+        console.error(
+            "erreur lors de la suppression des annonces coté model:",
             error.message
         );
         throw error
