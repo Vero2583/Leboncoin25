@@ -1,6 +1,8 @@
 import { createAnnonce, getAllAnnonces } from "../models/annonce.model.js";
 import { annonceSchema } from "../validations/annonce.validation.js";
 
+
+
 export const getAnnonces = async (req, res) => {
   try {
     const annonces = await getAllAnnonces();
@@ -16,11 +18,13 @@ export const getAnnonces = async (req, res) => {
   }
 };
 
+
+
 export const create = async (req, res) => {
   try {
-    const { title, price, city, idcategories } = req.body;
-    const image = req.file ? req.file.filename : null;
-    const idusers = req.user.id;
+    const { title, price, city, idcategories } = req.body
+    const image = req.file ? req.file.filename : null
+    const idusers = req.user.id
 
     // validation
 
@@ -28,7 +32,7 @@ export const create = async (req, res) => {
       title,
       price,
       city,
-      idcategories,
+      idcategories
     });
     if (error) {
       return res.status(400).json({ message: error.details[0].message });
@@ -47,6 +51,7 @@ export const create = async (req, res) => {
       .json({ message: "erreur serveur lors de la creation des annonces"});
   }
 };
+
 
 export const getById = async (req, res) => {
   try {
@@ -81,7 +86,7 @@ export const updateAnnonceById = async (req, res) => {
 
     // Champs updatables
 
-   const updatedData = {
+     const updatedData = {
      title: req.body.title ?? existingAnnonce.title,
      price: req.body.price ?? existingAnnonce.price,
      city: req.body.city ?? existingAnnonce.city,

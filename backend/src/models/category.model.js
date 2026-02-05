@@ -18,7 +18,7 @@ export const getAllCategories = async () => {
 export const create = async (name) => {
     try {
         
-        await db.query('INSERT INTO categories (name) VALUES (?)', [name])
+        await db.query("INSERT INTO categories (name) VALUES (?)", [name])
 
     } catch (error) {
         console.error("erreur lors de la creation des categories", error.message)
@@ -26,9 +26,9 @@ export const create = async (name) => {
     }
 }
 
-//Afficher par id
+// récuperer une seule categorie par rapport a son id
 
-export const byid = async (id) => {
+export const getCategoryById = async (id) => {
     try {
         
         const [rows] = await db.query('SELECT * FROM categories WHERE id = ?', [id])

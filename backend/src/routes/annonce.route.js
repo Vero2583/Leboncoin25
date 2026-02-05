@@ -7,9 +7,9 @@ import { upload } from '../middlewares/upload.middleware.js'
 const router = express.Router()
 
 router.get('/', getAnnonces)
-router.post('/', authMiddleware, upload.array('image', 5), create)
+router.post('/', authMiddleware, upload.single('image'), create)
 router.get('/:id', getById)
-router.put('/:id', upload.array('image', 5), updateAnnonceById)
+router.put('/:id', upload.single('image'), updateAnnonceById)
 router.delete('/:id', authMiddleware, deleteById)
 
 
